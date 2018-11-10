@@ -7,7 +7,11 @@
     %input#email{name: "entry.1553332316", type: 'time', value: Time.current.strftime('%H:%M') }/
   %div
     %label{:for => "content"} 内容
-    %input#email{:name => "entry.883692591", :placeholder => "", :type => "text"}/
+    %input{ name: 'entry.1694639330', type: 'radio', value: '筋肉体操1' } 筋肉体操1
+    %input{ name: 'entry.1694639330', type: 'radio', value: '筋肉体操2' } 筋肉体操2
+    %input{ name: 'entry.1694639330', type: 'radio', value: '筋肉体操3' } 筋肉体操3
+    %input{ name: 'entry.1694639330', type: 'radio', value: 'その他' } その他
+  %div
     %label{:for => "memo"} メモ
     %textarea#msg{:name => "entry.537258214", :placeholder => ""}
   %button{:name => "button", :type => "submit", :value => "送信"}
