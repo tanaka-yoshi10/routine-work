@@ -1,10 +1,10 @@
 %form{ action: ENV['GOOGLE_FORM_ACTION'] }
   %div
     %label{:for => "year"} 日付
-    %input#email{:name => "entry.2083007388", :placeholder => "", :type => "text"}/
+    %input#email{:name => "entry.2083007388", :placeholder => "", :type => "date"}/
   %div
     %label{:for => "hour"} 時刻
-    %input#email{:name => "entry.1553332316", :placeholder => "", :type => "text"}/
+    %input#email{name: "entry.1553332316", type: 'time', value: Time.current.strftime('%H:%M') }/
   %div
     %label{:for => "content"} 内容
     %input#email{:name => "entry.883692591", :placeholder => "", :type => "text"}/
