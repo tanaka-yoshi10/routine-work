@@ -1,4 +1,6 @@
 .card
+  .card-header
+    = @routine.name
   .card-body
     .my-2
       = link_to fa_icon('list', text: 'チェックリストを開く'), ENV['CHECKLIST_URL'], target: '_blank'
@@ -11,7 +13,7 @@
         %input.form-control#hour{ name: "entry.1553332316", type: 'time', value: Time.current.strftime('%H:%M') }
       .form-group
         %label{ for: 'content' } 内容
-        - %w(筋肉体操1 筋肉体操2 筋肉体操3 その他).each.with_index(1) do |item, i|
+        - @routine.selections.pluck(:title).each.with_index(1) do |item, i|
           .form-check
             %input.form-check-input{ id: "content#{i}", name: 'entry.1694639330', type: 'radio', value: item }
             %label.form-check-label{ for: "content#{i}" }= item
