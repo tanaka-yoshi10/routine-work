@@ -1,4 +1,4 @@
-class RoutineHistoriesController < ApplicationController
+class HistoriesController < ApplicationController
   before_action :set_routine
 
   def new
