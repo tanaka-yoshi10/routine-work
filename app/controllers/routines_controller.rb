@@ -2,6 +2,7 @@ class RoutinesController < ApplicationController
   before_action :set_routine, only: %i(show update edit destroy)
 
   def index
+    @routines = Routine.all.order(:id)
   end
 
   def show

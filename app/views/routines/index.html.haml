@@ -1,2 +1,7 @@
-%h1 Routines#index
-%p Find me in app/views/routines/index.html.haml
+.card
+  .card-header
+    一覧
+  .card-body
+    %ul.list-group
+      - @routines.each do |routine|
+        %li.list-group-item= link_to routine.name, routine
