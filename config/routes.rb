@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'routines#index'
 
   resources :routines do
     resources :histories, only: %i(new)
