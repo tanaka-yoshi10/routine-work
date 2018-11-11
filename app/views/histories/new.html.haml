@@ -1,6 +1,7 @@
 .card
   .card-header
     = @routine.name
+    = link_to fa_icon('edit', text: '編集'), edit_routine_path(@routine), class: 'small'
   .card-body
     - if @routine.image.attached?
       .text-center
