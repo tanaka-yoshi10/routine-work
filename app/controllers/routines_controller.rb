@@ -5,9 +5,16 @@ class RoutinesController < ApplicationController
   end
 
   def new
+    @routine = Routine.new
   end
 
   def create
+    @routine = Routine.new(routine_params)
+    if @routine.save
+      redirect_to routines_url, notice: '追加しました'
+    else
+      render :new
+    end
   end
 
   def update
