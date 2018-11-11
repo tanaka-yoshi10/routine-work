@@ -1,4 +1,4 @@
-.card
+.card#app
   .card-header
     編集
   .card-body
@@ -8,3 +8,7 @@
       = f.input :image
       = f.input :rrule
       = f.button :button, class: 'btn btn-primary', data: { disable_with: in_progress }
+    %navbar
+
+= javascript_pack_tag 'routine'
+
