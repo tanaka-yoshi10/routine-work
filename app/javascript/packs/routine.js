@@ -3,7 +3,10 @@ import Header from './components/header.vue'
 
 const app = new Vue({
   el: '#app',
+  data: {
+    rule: ''
+  },
   components: {
-    'navbar': Header,
+    'rrule': Header,
   },
 })
