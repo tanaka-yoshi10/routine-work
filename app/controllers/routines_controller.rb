@@ -43,6 +43,6 @@ class RoutinesController < ApplicationController
   end
 
   def routine_params
-    params.require(:routine).permit(%i(name checklist_url image rrule))
+    params.require(:routine).permit(%i(name checklist_url image rrule), selections_attributes: %i(id title _destroy))
   end
 end

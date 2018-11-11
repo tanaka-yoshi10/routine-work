@@ -7,6 +7,12 @@
       = f.input :checklist_url
       = f.input :image
       = f.input :rrule
+      %h3 Selections
+      #selections.my-2
+        = f.simple_fields_for :selections do |selection|
+          = render 'selection_fields', f: selection
+        .links
+          = link_to_add_association 'add selection', f, :selections
       = f.button :button, class: 'btn btn-primary', data: { disable_with: in_progress }
     %navbar
 
