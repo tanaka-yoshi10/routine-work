@@ -10,6 +10,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-rails'
+gem 'foreman'
 gem 'haml-rails'
 gem 'ice_cube'
 gem 'jbuilder', '~> 2.5'
