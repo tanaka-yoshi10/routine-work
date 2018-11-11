@@ -5,6 +5,7 @@ ruby '2.5.3'
 
 gem 'rails', '~> 5.2.1'
 
+gem 'aws-sdk-s3', require: false
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'coffee-rails', '~> 4.2'
