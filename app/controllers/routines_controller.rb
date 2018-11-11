@@ -1,7 +1,11 @@
 class RoutinesController < ApplicationController
-  before_action :set_routine, only: %i(update edit destroy)
+  before_action :set_routine, only: %i(show update edit destroy)
 
   def index
+  end
+
+  def show
+    redirect_to new_routine_history_url(@routine)
   end
 
   def new
