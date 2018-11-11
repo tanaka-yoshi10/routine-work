@@ -2,8 +2,9 @@
   .card-header
     = @routine.name
   .card-body
-    .text-center
-      = image_tag(@routine.image, class: 'w-50')
+    - if @routine.image.attached?
+      .text-center
+        = image_tag(@routine.image, class: 'w-50')
     .my-2
       = link_to fa_icon('list', text: 'チェックリストを開く'), @routine.checklist_url, target: '_blank'
     %form{ action: ENV['GOOGLE_FORM_ACTION'] }
