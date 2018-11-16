@@ -1,6 +1,10 @@
 class HistoriesController < ApplicationController
   before_action :set_routine
 
+  def index
+    @histories = @routine.histories.order(:done_at)
+  end
+
   def new
     @history = @routine.histories.build
   end

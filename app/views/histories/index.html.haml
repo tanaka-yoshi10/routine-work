@@ -1,0 +1,7 @@
+.card
+  .card-header
+    一覧
+  .card-body
+    %ul.list-group
+      - @histories.each do |history|
+        %li.list-group-item #{history.done_at} #{history.menu} #{history.memo}
