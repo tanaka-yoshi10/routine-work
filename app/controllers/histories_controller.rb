@@ -1,5 +1,6 @@
 class HistoriesController < ApplicationController
   before_action :set_routine
+  before_action :set_history, only: %i(destroy)
 
   def index
     @histories = @routine.histories.order(:done_at)
@@ -18,10 +19,19 @@ class HistoriesController < ApplicationController
     end
   end
 
+  def destroy
+    @history.destroy!
+    redirect_to routine_histories_url(@routine), notice: '削除しました'
+  end
+
   private
 
   def set_routine
     @routine = Routine.find(params[:routine_id])
+  end
+
+  def set_history
+    @history = @routine.histories.find(params[:id])
   end
 
   def history_params
