@@ -6,5 +6,5 @@
     %ul.list-group
       - @histories.each do |history|
         %li.list-group-item
-          #{history.done_at} #{history.menu} #{history.memo}
+          #{l history.done_at, format: :long} #{history.menu} #{history.memo}
           = link_to fa_icon('trash'), routine_history_path(@routine, history), method: :delete, data: { confirm: '本当に削除しますか？' }
