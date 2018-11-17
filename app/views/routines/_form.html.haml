@@ -7,12 +7,12 @@
       = f.input :checklist_url
       = f.input :image
       %rrule{ value: @routine.rrule }
-      %h3 Selections
-      #selections.my-2
+      %h3 選択肢
+      #selections.my-4
         = f.simple_fields_for :selections do |selection|
           = render 'selection_fields', f: selection
         .links
-          = link_to_add_association 'add selection', f, :selections
+          = link_to_add_association fa_icon('plus-circle lg', text: '追加'), f, :selections
       = f.button :button, class: 'btn btn-primary', data: { disable_with: in_progress }
 
 = javascript_pack_tag 'routine'
