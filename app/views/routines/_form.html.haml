@@ -5,7 +5,6 @@
     = simple_form_for(@routine) do |f|
       = f.input :name
       = f.input :checklist_url
-      = f.input :image
       %rrule{ value: @routine.rrule }
       %h3 選択肢
       #selections.my-4
