@@ -94,6 +94,8 @@ GEM
       thor (>= 0.13.6)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gretel (3.0.9)
+      rails (>= 3.1.0)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -240,6 +242,7 @@ DEPENDENCIES
   dotenv-rails
   font-awesome-rails
   foreman
+  gretel
   haml-rails
   ice_cube
   jbuilder (~> 2.5)
