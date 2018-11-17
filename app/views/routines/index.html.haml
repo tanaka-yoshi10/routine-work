@@ -3,6 +3,6 @@
   .card-header
     一覧
   .card-body
-    %ul.list-group
+    .list-group
       - @routines.each do |routine|
-        %li.list-group-item= link_to routine.name, routine
+        = link_to routine.name, routine, class: 'list-group-item'
