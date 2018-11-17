@@ -1,2 +1,5 @@
 - breadcrumb :routine, @routine
 = render 'routines/form'
+
+.m-2
+  = link_to fa_icon('trash'), routine_path(@routine), method: :delete, data: { confirm: '本当に削除しますか？' }

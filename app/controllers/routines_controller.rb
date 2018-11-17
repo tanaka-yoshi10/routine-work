@@ -34,6 +34,8 @@ class RoutinesController < ApplicationController
   end
 
   def destroy
+    @routine.destroy!
+    redirect_to routines_url, notice: '削除しました'
   end
 
   private
